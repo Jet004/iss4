@@ -8,12 +8,17 @@
     "dependencies": {
         "@sap/cds": "^5",
         "express": "^4",
-        "hdb": "^0.18.3"
+        "hdb": "^0.18.3",
+        "node-fetch": "^2.6.6"
     },
     "devDependencies": {
+        "fetch": "^1.1.0",
+        "jest": "^27.3.1",
+        "node": "^17.1.0",
         "sqlite3": "^5.0.2"
     },
     "scripts": {
+        "test": "jest",
         "start": "cds run"
     },
     "eslintConfig": {

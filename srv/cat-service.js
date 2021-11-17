@@ -4,7 +4,6 @@ module.exports = (srv) => {
 
     // Reduce stock of ordered books
     srv.before('CREATE', 'Orders', async (req) => {
-        console.log("OK")
         const order = req.data
         if(!order.amount || order.amount <= 0) return req.error(400, 'Order at least 1 book')
         const tx = cds.transaction(req)
