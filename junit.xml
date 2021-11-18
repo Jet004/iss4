@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="65" failures="0" errors="0" time="47.221">
+  <testsuite name="Author Routes" errors="0" failures="0" skipped="0" timestamp="2021-11-18T04:15:57" time="28.401" tests="18">
+    <testcase classname="Author Routes &gt; GET /Authors with valid input - returns 200 OK, body contains author data" name="Author Routes &gt; GET /Authors with valid input - returns 200 OK, body contains author data" time="1.906">
+    </testcase>
+    <testcase classname="Author Routes &gt; GET /Authors with author ID - returns 200 OK with details of author with id: 101" name="Author Routes &gt; GET /Authors with author ID - returns 200 OK with details of author with id: 101" time="1.61">
+    </testcase>
+    <testcase classname="Author Routes &gt; GET /Authors with non-existent author ID - returns 404 Not Found" name="Author Routes &gt; GET /Authors with non-existent author ID - returns 404 Not Found" time="1.843">
+    </testcase>
+    <testcase classname="Author Routes &gt; GET /Authors with invalid author ID - returns 404 Not Found" name="Author Routes &gt; GET /Authors with invalid author ID - returns 404 Not Found" time="1.842">
+    </testcase>
+    <testcase classname="Author Routes &gt; GET /Authors with missing author ID - returns 400 Bad Request" name="Author Routes &gt; GET /Authors with missing author ID - returns 400 Bad Request" time="1.512">
+    </testcase>
+    <testcase classname="Author Routes &gt; POST /Authors with valid input - responds with 201 Created, creates a new author in the database with id: 200" name="Author Routes &gt; POST /Authors with valid input - responds with 201 Created, creates a new author in the database with id: 200" time="1.351">
+    </testcase>
+    <testcase classname="Author Routes &gt; POST /Authors with non INT id - responds with 400 Bad Request" name="Author Routes &gt; POST /Authors with non INT id - responds with 400 Bad Request" time="1.026">
+    </testcase>
+    <testcase classname="Author Routes &gt; POST /Authors with non STRING name - responds with 400 Bad Request" name="Author Routes &gt; POST /Authors with non STRING name - responds with 400 Bad Request" time="1.852">
+    </testcase>
+    <testcase classname="Author Routes &gt; POST /Authors with no body - responds with 400 Bad Request" name="Author Routes &gt; POST /Authors with no body - responds with 400 Bad Request" time="1.21">
+    </testcase>
+    <testcase classname="Author Routes &gt; PUT /Authors(200) with valid input - reponds with 200 OK, updates author in database" name="Author Routes &gt; PUT /Authors(200) with valid input - reponds with 200 OK, updates author in database" time="1.08">
+    </testcase>
+    <testcase classname="Author Routes &gt; PUT /Authors(200) with no id in request - responds with 400 Bad Request" name="Author Routes &gt; PUT /Authors(200) with no id in request - responds with 400 Bad Request" time="1.468">
+    </testcase>
+    <testcase classname="Author Routes &gt; PUT /Authors(200) with no parameter in request - responds with 405 Method Not Allowed" name="Author Routes &gt; PUT /Authors(200) with no parameter in request - responds with 405 Method Not Allowed" time="1.557">
+    </testcase>
+    <testcase classname="Author Routes &gt; PUT /Authors(200) with non INT id - responds with 400 Bad Request" name="Author Routes &gt; PUT /Authors(200) with non INT id - responds with 400 Bad Request" time="2.048">
+    </testcase>
+    <testcase classname="Author Routes &gt; PUT /Authors(200) with non STRING name - responds with 400 Bad Request" name="Author Routes &gt; PUT /Authors(200) with non STRING name - responds with 400 Bad Request" time="1.108">
+    </testcase>
+    <testcase classname="Author Routes &gt; PUT /Authors(200) with no body - responds with 400 Bad Request" name="Author Routes &gt; PUT /Authors(200) with no body - responds with 400 Bad Request" time="1.18">
+    </testcase>
+    <testcase classname="Author Routes &gt; DELETE /Authors(200) with valid input - responds with 204 No Content" name="Author Routes &gt; DELETE /Authors(200) with valid input - responds with 204 No Content" time="1.369">
+    </testcase>
+    <testcase classname="Author Routes &gt; DELETE /Authors(200) with no id parameter - responds with 400 Bad Request" name="Author Routes &gt; DELETE /Authors(200) with no id parameter - responds with 400 Bad Request" time="1.187">
+    </testcase>
+    <testcase classname="Author Routes &gt; DELETE /Authors(200) with missing parameter - responds with 405 Method Not Allowed" name="Author Routes &gt; DELETE /Authors(200) with missing parameter - responds with 405 Method Not Allowed" time="1.032">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test Domain Model Relationships" errors="0" failures="0" skipped="0" timestamp="2021-11-18T04:15:57" time="31.842" tests="18">
+    <testcase classname="Test Domain Model Relationships GET /Orders?$expand=book - responds with all orders with book details" name="Test Domain Model Relationships GET /Orders?$expand=book - responds with all orders with book details" time="1.845">
+    </testcase>
+    <testcase classname="Test Domain Model Relationships GET /Orders?$expand=book($expand=author) - responds with all orders with book and author details" name="Test Domain Model Relationships GET /Orders?$expand=book($expand=author) - responds with all orders with book and author details" time="1.826">
+    </testcase>
+    <testcase classname="Test Domain Model Relationships GET /Books(207)/author - with valid book ID - responds with 200 OK" name="Test Domain Model Relationships GET /Books(207)/author - with valid book ID - responds with 200 OK" time="1.545">
+    </testcase>
+    <testcase classname="Test Domain Model Relationships GET /Books(someString)/author - with invalid book ID - responds with 404 Not Found" name="Test Domain Model Relationships GET /Books(someString)/author - with invalid book ID - responds with 404 Not Found" time="1.319">
+    </testcase>
+    <testcase classname="Test Domain Model Relationships GET /Books()/author - with missing book ID - responds with 400 Bad Request" name="Test Domain Model Relationships GET /Books()/author - with missing book ID - responds with 400 Bad Request" time="1.438">
+    </testcase>
+    <testcase classname="Test Domain Model Relationships GET /Books/author - with missing parameter - responds with 400 Bad Request" name="Test Domain Model Relationships GET /Books/author - with missing parameter - responds with 400 Bad Request" time="1.754">
+    </testcase>
+    <testcase classname="Test Domain Model Relationships GET /Authors(107)/books - with valid author ID - responds with 200 OK" name="Test Domain Model Relationships GET /Authors(107)/books - with valid author ID - responds with 200 OK" time="1.218">
+    </testcase>
+    <testcase classname="Test Domain Model Relationships GET /Authors(someString)/books - with invalid author ID - responds with 404 Not Found" name="Test Domain Model Relationships GET /Authors(someString)/books - with invalid author ID - responds with 404 Not Found" time="0.798">
+    </testcase>
+    <testcase classname="Test Domain Model Relationships GET /Authors()/books - with missing author ID - responds with 400 Bad Request" name="Test Domain Model Relationships GET /Authors()/books - with missing author ID - responds with 400 Bad Request" time="1.436">
+    </testcase>
+    <testcase classname="Test Domain Model Relationships GET /Authors/books - with missing parameter - responds with 400 Bad Request" name="Test Domain Model Relationships GET /Authors/books - with missing parameter - responds with 400 Bad Request" time="1.555">
+    </testcase>
+    <testcase classname="Test Domain Model Relationships GET /Authors(107)/name - with valid author ID - responds with 200 OK" name="Test Domain Model Relationships GET /Authors(107)/name - with valid author ID - responds with 200 OK" time="2.049">
+    </testcase>
+    <testcase classname="Test Domain Model Relationships GET /Authors(someString)/name - with invalid author ID - responds with 404 Not Found" name="Test Domain Model Relationships GET /Authors(someString)/name - with invalid author ID - responds with 404 Not Found" time="1.048">
+    </testcase>
+    <testcase classname="Test Domain Model Relationships GET /Authors()/name - with missing author ID - responds with 400 Bad Request" name="Test Domain Model Relationships GET /Authors()/name - with missing author ID - responds with 400 Bad Request" time="1.23">
+    </testcase>
+    <testcase classname="Test Domain Model Relationships GET /Authors/name - with missing parameter - responds with 400 Bad Request" name="Test Domain Model Relationships GET /Authors/name - with missing parameter - responds with 400 Bad Request" time="1.369">
+    </testcase>
+    <testcase classname="Test Domain Model Relationships GET /Authors(107)/books?$select=title - with valid author ID - responds with 200 OK" name="Test Domain Model Relationships GET /Authors(107)/books?$select=title - with valid author ID - responds with 200 OK" time="1.24">
+    </testcase>
+    <testcase classname="Test Domain Model Relationships GET /Authors(someString)/books?$select=title - with invalid author ID - responds with 404 Not Found" name="Test Domain Model Relationships GET /Authors(someString)/books?$select=title - with invalid author ID - responds with 404 Not Found" time="0.76">
+    </testcase>
+    <testcase classname="Test Domain Model Relationships GET /Authors()/books?$select=title - with missing author ID - responds with 400 Bad Request" name="Test Domain Model Relationships GET /Authors()/books?$select=title - with missing author ID - responds with 400 Bad Request" time="1.047">
+    </testcase>
+    <testcase classname="Test Domain Model Relationships GET /Authors/books?$select=title - with missing parameter - responds with 400 Bad Request" name="Test Domain Model Relationships GET /Authors/books?$select=title - with missing parameter - responds with 400 Bad Request" time="1.016">
+    </testcase>
+  </testsuite>
+  <testsuite name="Application Routes" errors="0" failures="0" skipped="0" timestamp="2021-11-18T04:16:29" time="3.161" tests="2">
+    <testcase classname="Application Routes &gt; Route GET / returns 200 OK" name="Application Routes &gt; Route GET / returns 200 OK" time="1.451">
+    </testcase>
+    <testcase classname="Application Routes &gt; Route GET /catalog returns 200 OK, body contains route names" name="Application Routes &gt; Route GET /catalog returns 200 OK, body contains route names" time="1.356">
+    </testcase>
+  </testsuite>
+  <testsuite name="Book Routes" errors="0" failures="0" skipped="0" timestamp="2021-11-18T04:16:25" time="7.162" tests="5">
+    <testcase classname="Book Routes &gt; GET /Books with valid input - returns 200 OK, body contains book data" name="Book Routes &gt; GET /Books with valid input - returns 200 OK, body contains book data" time="1.12">
+    </testcase>
+    <testcase classname="Book Routes &gt; GET /Books with valid book ID - returns 200 OK, response body contains book data for book with id: 201" name="Book Routes &gt; GET /Books with valid book ID - returns 200 OK, response body contains book data for book with id: 201" time="1.675">
+    </testcase>
+    <testcase classname="Book Routes &gt; GET /Books with non-existent book ID - returns 404 Not Found" name="Book Routes &gt; GET /Books with non-existent book ID - returns 404 Not Found" time="1.549">
+    </testcase>
+    <testcase classname="Book Routes &gt; GET /Books with invalid book ID - returns 404 Not Found, not a valid key" name="Book Routes &gt; GET /Books with invalid book ID - returns 404 Not Found, not a valid key" time="1.353">
+    </testcase>
+    <testcase classname="Book Routes &gt; GET /Books with missing author ID - returns 400 Bad Request, expected at least one key" name="Book Routes &gt; GET /Books with missing author ID - returns 400 Bad Request, expected at least one key" time="1.087">
+    </testcase>
+  </testsuite>
+  <testsuite name="Order Routes" errors="0" failures="0" skipped="0" timestamp="2021-11-18T04:15:57" time="46.24" tests="22">
+    <testcase classname="Order Routes &gt; POST /Orders without UUID - responds with 201 Created, creates an order in the database with an auto-generated UUID, reduces book stock by &quot;amount&quot;" name="Order Routes &gt; POST /Orders without UUID - responds with 201 Created, creates an order in the database with an auto-generated UUID, reduces book stock by &quot;amount&quot;" time="6.648">
+    </testcase>
+    <testcase classname="Order Routes &gt; POST /Orders with UUID - responds with 201 Created, creates an order in the database with the given UUID if not exists, reduces book stock by &quot;amount&quot;" name="Order Routes &gt; POST /Orders with UUID - responds with 201 Created, creates an order in the database with the given UUID if not exists, reduces book stock by &quot;amount&quot;" time="4.289">
+    </testcase>
+    <testcase classname="Order Routes &gt; POST /Orders - should fail with UUID - responds with 400 Bad Request, Order with this ID already exists" name="Order Routes &gt; POST /Orders - should fail with UUID - responds with 400 Bad Request, Order with this ID already exists" time="1.754">
+    </testcase>
+    <testcase classname="Order Routes &gt; POST /Orders - should fail with non-existent book_ID - responds with 409 Conflict" name="Order Routes &gt; POST /Orders - should fail with non-existent book_ID - responds with 409 Conflict" time="1.187">
+    </testcase>
+    <testcase classname="Order Routes &gt; POST /Orders - should fail with invlaid UUID - responds with 400 Bad Request" name="Order Routes &gt; POST /Orders - should fail with invlaid UUID - responds with 400 Bad Request" time="1.056">
+    </testcase>
+    <testcase classname="Order Routes &gt; POST /Orders - should fail with invalid book_ID - responds with 400 Bad Request" name="Order Routes &gt; POST /Orders - should fail with invalid book_ID - responds with 400 Bad Request" time="1.527">
+    </testcase>
+    <testcase classname="Order Routes &gt; POST /Orders - should fail with amount of 0 - responds with 400 Bad Request" name="Order Routes &gt; POST /Orders - should fail with amount of 0 - responds with 400 Bad Request" time="2.049">
+    </testcase>
+    <testcase classname="Order Routes &gt; POST /Orders - should fail with invalid amount - responds with 400 Bad Request" name="Order Routes &gt; POST /Orders - should fail with invalid amount - responds with 400 Bad Request" time="1.498">
+    </testcase>
+    <testcase classname="Order Routes &gt; POST /Orders - should fail with book stock = 0 - responds with 409 Conflict" name="Order Routes &gt; POST /Orders - should fail with book stock = 0 - responds with 409 Conflict" time="4.043">
+    </testcase>
+    <testcase classname="Order Routes &gt; GET /Orders responds with a list of all orders in the database" name="Order Routes &gt; GET /Orders responds with a list of all orders in the database" time="1.057">
+    </testcase>
+    <testcase classname="Order Routes &gt; GET /Orders responds with details of a single order" name="Order Routes &gt; GET /Orders responds with details of a single order" time="1.051">
+    </testcase>
+    <testcase classname="Order Routes &gt; GET /Orders with invalid Order ID - responds with 404 Not Found" name="Order Routes &gt; GET /Orders with invalid Order ID - responds with 404 Not Found" time="1.04">
+    </testcase>
+    <testcase classname="Order Routes &gt; GET /Orders with missing Order ID - responds with 400 Bad Request" name="Order Routes &gt; GET /Orders with missing Order ID - responds with 400 Bad Request" time="1.632">
+    </testcase>
+    <testcase classname="Order Routes &gt; PUT /Orders with valid inputs - responds with 200 OK" name="Order Routes &gt; PUT /Orders with valid inputs - responds with 200 OK" time="1.558">
+    </testcase>
+    <testcase classname="Order Routes &gt; PUT /Orders with non-existent book_ID - respond with 400 Bad Request" name="Order Routes &gt; PUT /Orders with non-existent book_ID - respond with 400 Bad Request" time="1.358">
+    </testcase>
+    <testcase classname="Order Routes &gt; PUT /Orders with invalid book_ID - respond with 400 Bad Request" name="Order Routes &gt; PUT /Orders with invalid book_ID - respond with 400 Bad Request" time="0.816">
+    </testcase>
+    <testcase classname="Order Routes &gt; PUT /Orders with invalid amount - respond with 400 Bad Request" name="Order Routes &gt; PUT /Orders with invalid amount - respond with 400 Bad Request" time="1.151">
+    </testcase>
+    <testcase classname="Order Routes &gt; DELETE /Orders responds with 204 No Content" name="Order Routes &gt; DELETE /Orders responds with 204 No Content" time="3.224">
+    </testcase>
+    <testcase classname="Order Routes &gt; DELETE /Orders with non-existent Order ID - responds with 404 Not Found" name="Order Routes &gt; DELETE /Orders with non-existent Order ID - responds with 404 Not Found" time="1.843">
+    </testcase>
+    <testcase classname="Order Routes &gt; DELETE /Orders with invalid Order ID - responds with 404 Not Found" name="Order Routes &gt; DELETE /Orders with invalid Order ID - responds with 404 Not Found" time="1.524">
+    </testcase>
+    <testcase classname="Order Routes &gt; DELETE /Orders with missing Order ID - responds with 400 Bad Request" name="Order Routes &gt; DELETE /Orders with missing Order ID - responds with 400 Bad Request" time="1.548">
+    </testcase>
+    <testcase classname="Order Routes &gt; DELETE /Orders without parameters - responds with 405 Method Not Allowed" name="Order Routes &gt; DELETE /Orders without parameters - responds with 405 Method Not Allowed" time="1.639">
+    </testcase>
+  </testsuite>
+</testsuites>

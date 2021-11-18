@@ -14,11 +14,12 @@
     "devDependencies": {
         "fetch": "^1.1.0",
         "jest": "^27.3.1",
+        "jest-junit": "^13.0.0",
         "node": "^17.1.0",
         "sqlite3": "^5.0.2"
     },
     "scripts": {
-        "test": "jest",
+        "test": "jest --verbose",
         "start": "cds run"
     },
     "eslintConfig": {
@@ -61,5 +62,12 @@
         "features": {
             "fiori_preview": true
         }
+    },
+    "jest": {
+        "reporters": [ "default", "jest-junit" ],
+        "testTimeout": 8000
+    },
+    "jest-junit": {
+        "ancestorSeparator": " > "
     }
 }
