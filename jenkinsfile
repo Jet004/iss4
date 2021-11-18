@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo "-- Running integration tests"
 
-
+                sh npm test
 
                 echo "-- Integration tests complete"
             }
