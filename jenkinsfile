@@ -4,16 +4,15 @@ pipeline {
     stages {
         stage('test') {
             steps {
-                echo "-- Running integration tests"
-
                 npm 'install'
+
+                echo "-- Running integration tests"
                 npm 'test'
 
                 echo "-- Integration tests complete"
+
+                junit 'junit.xml'
             }
-        }
-        post {
-            junit 'junit.xml'
         }
     }
 }
