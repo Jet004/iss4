@@ -19,7 +19,7 @@
         "sqlite3": "^5.0.2"
     },
     "scripts": {
-        "test": "jest --verbose",
+        "test": "jest --ci --reporters=default --reporters=jest-junit",
         "start": "cds run"
     },
     "eslintConfig": {
