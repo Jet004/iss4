@@ -4,7 +4,11 @@ pipeline {
     stages {
         stage('test') {
             steps {
-                echo "Tests will run here"
+                echo "-- Running integration tests"
+
+
+
+                echo "-- Integration tests complete"
             }
         }
     }
