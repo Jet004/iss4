@@ -5,8 +5,10 @@ pipeline {
         stage('test') {
             steps {
                 echo "-- Running integration tests"
-
-                sh 'npm test'
+                withNPMwrapper(){
+                    npm 'install'
+                    npm 'test'
+                }
 
                 echo "-- Integration tests complete"
             }
